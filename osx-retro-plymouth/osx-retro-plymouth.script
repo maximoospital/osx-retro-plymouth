@@ -10,6 +10,7 @@ if ( Plymouth.GetMode () == "boot" )
     logo.sprite.SetY (Window.GetHeight() / 2 - logo.image.GetHeight() / 2);
     logo.sprite.SetZ (10000);
     progress = 0;
+    frame_skip = 0;  # Throttle counter for animation speed
 
     progress_box.image = Image("throbber-0" + progress + ".png");
     progress_box.sprite = Sprite();
@@ -36,7 +37,12 @@ fun refresh ()
     mode = Plymouth.GetMode ();
     if (status == "normal" && mode == "boot" )
       {
-        progress++;
+        frame_skip++;
+        if (frame_skip >= 3)  # Update every 3 frames (~16fps instead of 50fps)
+          {
+            frame_skip = 0;
+            progress++;
+          }
 
         if (progress >= 12)
           progress = 0;
