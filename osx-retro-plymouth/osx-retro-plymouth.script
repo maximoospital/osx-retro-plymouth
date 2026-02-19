@@ -38,7 +38,7 @@ fun refresh ()
     if (status == "normal" && mode == "boot" )
       {
         frame_skip++;
-        if (frame_skip >= 3)  # Update every 3 frames (~16fps instead of 50fps)
+        if (frame_skip >= 10)  # ~5fps - full rotation every ~2.4 seconds
           {
             frame_skip = 0;
             progress++;
