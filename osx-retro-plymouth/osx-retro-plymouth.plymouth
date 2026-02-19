@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=osx-retro-plymouth
+Description=Theme imitating pre-Yosemite Mac Os X boot screens
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/osx-retro-plymouth
+ScriptFile=/usr/share/plymouth/themes/osx-retro-plymouth/osx-retro-plymouth.script
