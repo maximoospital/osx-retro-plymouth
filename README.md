@@ -3,6 +3,10 @@
 Mac OS X Pre-Yosemite Plymouth theme. Based on mintyMac's, upgraded it to remove deprecated apis, expand the animation and use the actual apple logo.
 I'll add a screenshot whenever i take one, okk?
 
+
+![screenshot](https://i.imgur.com/0yZQNYm.jpeg)
+
+
 ## Installation
 
 1. Clone or download this repository.
